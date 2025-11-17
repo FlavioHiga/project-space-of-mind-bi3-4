@@ -6,7 +6,15 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
+      padding: 20px 0;
+    }
+
+    body.saude-mental-page {
+      display: block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 40px 20px;
+      min-height: 100vh;
     }
 
     .container {
@@ -53,6 +61,28 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
+    .emotion-explanation {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      text-align: justify;
+      color: #444;
+      margin-bottom: 20px;
+      padding: 15px;
+      background: #f9f9f9;
+      border-left: 4px solid #667eea;
+      border-radius: 8px;
+    }
+
+    .emotion-tip {
+      font-size: 0.9rem;
+      color: #667eea;
+      font-weight: 600;
+      margin: 15px 0;
+      padding: 12px;
+      background: #e8f0ff;
+      border-radius: 8px;
+    }
+
     /* cores diferentes para cada emoção */
     .ansioso { background: #ffadad; }
     .triste { background: #9bbdf9; }
@@ -61,3 +91,459 @@
     .cansado { background: #c7ceea; }
     .motivado { background: #ffd6a5; }
     .calmo { background: #b5ead7; grid-column: span 2; }
+
+    /* Botão de Saúde Mental */
+    .saude-mental-btn {
+      align-self: flex-start;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-bottom: 20px;
+      width: fit-content;
+    }
+
+    .saude-mental-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    /* Página de Saúde Mental */
+    .saude-mental-container {
+      max-width: 900px;
+      background: #ffffff;
+      padding: 60px 40px 40px 40px;
+      position: relative;
+      margin: 0 auto;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .voltar-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: #f0f0f0;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .voltar-btn:hover {
+      background: #e0e0e0;
+    }
+
+    .saude-mental-container h1 {
+      color: #667eea;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 2.2rem;
+    }
+
+    .cuidados-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .cuidado-card {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .cuidado-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+    }
+
+    .cuidado-card h3 {
+      color: #667eea;
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.2rem;
+    }
+
+    .cuidado-card p {
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    .bottom-section {
+      text-align: center;
+      padding: 30px;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      border-radius: 15px;
+      margin-top: 20px;
+    }
+
+    .bottom-section h2 {
+      color: #667eea;
+      margin-top: 0;
+      font-size: 1.8rem;
+    }
+
+    .lembrete {
+      font-size: 1.1rem;
+      color: #333;
+      font-style: italic;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+
+    .voltar-principal {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .voltar-principal:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    /* Página de Créditos */
+    .creditos-page {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+
+    .creditos-container {
+      max-width: 900px;
+      background: #ffffff;
+      padding: 60px 40px 40px 40px;
+      position: relative;
+      margin: 0 auto;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .creditos-header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid #f5576c;
+    }
+
+    .creditos-header h1 {
+      color: #f5576c;
+      margin: 0 0 15px 0;
+      font-size: 2.2rem;
+    }
+
+    .creditos-intro {
+      color: #555;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .creditos-content h2 {
+      color: #f5576c;
+      margin-top: 30px;
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+    }
+
+    .developers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .developer-card {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .developer-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px rgba(245, 87, 108, 0.2);
+    }
+
+    .developer-avatar {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 0 auto 15px;
+    }
+
+    .developer-card h3 {
+      color: #f5576c;
+      margin: 0 0 8px 0;
+      font-size: 1.3rem;
+    }
+
+    .developer-card .role {
+      color: #667eea;
+      font-weight: 600;
+      margin: 5px 0;
+      font-size: 0.9rem;
+    }
+
+    .developer-card .description {
+      color: #555;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 10px 0 0 0;
+    }
+
+    .mission-section {
+      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+      padding: 30px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+    }
+
+    .mission-section h2 {
+      color: #d84315;
+      margin-top: 0;
+    }
+
+    .mission-section p {
+      color: #333;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .mission-list {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0 0 0;
+    }
+
+    .mission-list li {
+      color: #333;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      font-size: 0.95rem;
+    }
+
+    .mission-list li:last-child {
+      border-bottom: none;
+    }
+
+    .closing-message {
+      text-align: center;
+      background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+      padding: 30px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+    }
+
+    .closing-message h2 {
+      color: #2c3e50;
+      margin-top: 0;
+    }
+
+    .closing-message p {
+      color: #333;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+
+    .final-message {
+      font-size: 1.1rem;
+      color: #f5576c;
+      font-weight: 600;
+      font-style: italic;
+      margin-top: 15px !important;
+    }
+
+    .creditos-footer {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 2px solid #f5f5f5;
+      margin-top: 30px;
+    }
+
+    .creditos-footer p {
+      color: #999;
+      font-size: 0.9rem;
+      margin: 10px 0;
+    }
+
+    .footer-buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .btn-home, .btn-saude {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-home:hover, .btn-saude:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245, 87, 108, 0.4);
+    }
+
+    .btn-creditos {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-creditos:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245, 87, 108, 0.4);
+    }
+
+    .bottom-buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      body.saude-mental-page {
+        padding: 20px 15px;
+      }
+
+      .saude-mental-container {
+        padding: 60px 20px 30px 20px;
+        border-radius: 15px;
+      }
+
+      .voltar-btn {
+        top: 15px;
+        left: 15px;
+        padding: 8px 12px;
+        font-size: 0.85rem;
+      }
+
+      .saude-mental-container h1 {
+        font-size: 1.8rem;
+        margin-top: 5px;
+      }
+
+      .cuidados-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .cuidado-card {
+        padding: 20px;
+      }
+
+      .bottom-section {
+        padding: 20px;
+      }
+
+      body.creditos-page {
+        padding: 20px 15px;
+      }
+
+      .creditos-container {
+        padding: 60px 20px 30px 20px;
+        border-radius: 15px;
+      }
+
+      .creditos-header {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+      }
+
+      .creditos-header h1 {
+        font-size: 1.8rem;
+        margin: 0 0 12px 0;
+      }
+
+      .creditos-intro {
+        font-size: 0.95rem;
+      }
+
+      .developers-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+        margin-bottom: 30px;
+      }
+
+      .developer-card {
+        padding: 20px;
+      }
+
+      .developer-avatar {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+        margin: 0 auto 10px;
+      }
+
+      .developer-card h3 {
+        font-size: 1.1rem;
+      }
+
+      .mission-section {
+        padding: 20px;
+      }
+
+      .closing-message {
+        padding: 20px;
+      }
+
+      .footer-buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .btn-home, .btn-saude {
+        width: 100%;
+      }
+
+      .bottom-buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .voltar-principal, .btn-creditos {
+        width: 100%;
+      }
+    }
